@@ -1,5 +1,6 @@
 failed_ips = {}
 success_ips = set()
+targeted_usernames = {}
 
 with open("sample.log", "r") as file:
     for line in file:
@@ -11,6 +12,15 @@ with open("sample.log", "r") as file:
                 failed_ips[ip] += 1
             else:
                 failed_ips[ip] = 1
+
+            username = parts[parts.index("for") + 1]
+            if username == "invalid":
+                username = parts[parts.index("user") + 1]
+
+            if username in targeted_usernames:
+                targeted_usernames[username] += 1
+            else:
+                targeted_usernames[username] = 1
 
         elif "Accepted password" in line:
             ip = parts[parts.index("from") + 1]
@@ -28,3 +38,7 @@ print("\nHIGH ALERT - IP failed then succeeded (possible breach):")
 for ip in failed_ips:
     if ip in success_ips:
         print(f"{ip} - failed {failed_ips[ip]} times, then logged in successfully!")
+
+print("\nMost targeted usernames:")
+for username, count in targeted_usernames.items():
+    print(f"{username} - tried {count} times")
