@@ -5,3 +5,7 @@ Jul 15 10:24:01 server sshd[1237]: Accepted password for khanoo from 10.0.0.5 po
 Jul 15 10:25:10 server sshd[1238]: Failed password for invalid user test from 45.33.32.10 port 60000 ssh2
 Jul 15 10:26:00 server sshd[1239]: Failed password for invalid user test from 45.33.32.10 port 60001 ssh2
 Jul 15 10:26:05 server sshd[1240]: Failed password for invalid user test from 45.33.32.10 port 60002 ssh2
+Jul 15 10:27:00 server sshd[1241]: Failed password for invalid user backup from 78.24.55.10 port 61000 ssh2
+Jul 15 10:27:05 server sshd[1242]: Failed password for invalid user backup from 78.24.55.10 port 61001 ssh2
+Jul 15 10:27:10 server sshd[1243]: Failed password for invalid user backup from 78.24.55.10 port 61002 ssh2
+Jul 15 10:27:20 server sshd[1244]: Accepted password for backup from 78.24.55.10 port 61003 ssh2
