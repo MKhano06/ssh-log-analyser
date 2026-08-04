@@ -1,0 +1,7 @@
+Jul 15 10:23:45 server sshd[1234]: Failed password for invalid user admin from 192.168.1.50 port 51234 ssh2
+Jul 15 10:23:47 server sshd[1235]: Failed password for invalid user admin from 192.168.1.50 port 51235 ssh2
+Jul 15 10:23:50 server sshd[1236]: Failed password for root from 192.168.1.50 port 51236 ssh2
+Jul 15 10:24:01 server sshd[1237]: Accepted password for khanoo from 10.0.0.5 port 52011 ssh2
+Jul 15 10:25:10 server sshd[1238]: Failed password for invalid user test from 45.33.32.10 port 60000 ssh2
+Jul 15 10:26:00 server sshd[1239]: Failed password for invalid user test from 45.33.32.10 port 60001 ssh2
+Jul 15 10:26:05 server sshd[1240]: Failed password for invalid user test from 45.33.32.10 port 60002 ssh2
