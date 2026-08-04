@@ -1,8 +1,16 @@
+import sys
+
+if len(sys.argv) < 2:
+    print("Usage: python log_analyser.py <logfile>")
+    sys.exit(1)
+
+log_file = sys.argv[1]
+
 failed_ips = {}
 success_ips = set()
 targeted_usernames = {}
 
-with open("sample.log", "r") as file:
+with open(log_file, "r") as file:
     for line in file:
         parts = line.split()
 
@@ -25,6 +33,8 @@ with open("sample.log", "r") as file:
         elif "Accepted password" in line:
             ip = parts[parts.index("from") + 1]
             success_ips.add(ip)
+
+print(f"Analysing log file: {log_file}\n")
 
 print("All failed login attempts by IP:")
 print(failed_ips)
